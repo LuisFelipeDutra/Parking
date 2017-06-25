@@ -1,0 +1,26 @@
+﻿@model DAL.Models.Vagas
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Vagas</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Ocupada)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Ocupada)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.VagasID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
