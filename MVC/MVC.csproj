@@ -191,6 +191,7 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\TicketsController.cs" />
     <Compile Include="Controllers\VagasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -203,6 +204,10 @@
     <Compile Include="Migrations\201706250412332_InsercaoVaga.Designer.cs">
       <DependentUpon>201706250412332_InsercaoVaga.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706250538115_TicketController.cs" />
+    <Compile Include="Migrations\201706250538115_TicketController.Designer.cs">
+      <DependentUpon>201706250538115_TicketController.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -212,6 +217,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-MVC-20170624063958.mdf" />
+    <Content Include="App_Data\aspnet-MVC-20170624063958_log.ldf">
+      <DependentUpon>aspnet-MVC-20170624063958.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
@@ -273,6 +281,11 @@
     <Content Include="Views\Vagas\Details.cshtml" />
     <Content Include="Views\Vagas\Edit.cshtml" />
     <Content Include="Views\Vagas\Index.cshtml" />
+    <Content Include="Views\Tickets\Create.cshtml" />
+    <Content Include="Views\Tickets\Delete.cshtml" />
+    <Content Include="Views\Tickets\Details.cshtml" />
+    <Content Include="Views\Tickets\Edit.cshtml" />
+    <Content Include="Views\Tickets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -302,6 +315,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706250412332_InsercaoVaga.resx">
       <DependentUpon>201706250412332_InsercaoVaga.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706250538115_TicketController.resx">
+      <DependentUpon>201706250538115_TicketController.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
