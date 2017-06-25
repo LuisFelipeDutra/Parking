@@ -1,4 +1,4 @@
-﻿@model IEnumerable<DAL.Models.Vagas>
+﻿@model IEnumerable<DAL.Models.Vaga>
 
 @{
     ViewBag.Title = "Index";
@@ -23,9 +23,9 @@
             @Html.DisplayFor(modelItem => item.Ocupada)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.VagasID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.VagasID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.VagasID })
+            @Html.ActionLink("Edit", "Edit", new { id=item.VagaID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.VagaID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.VagaID })
         </td>
     </tr>
 }

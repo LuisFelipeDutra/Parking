@@ -1,4 +1,4 @@
-﻿@model DAL.Models.Vagas
+﻿@model DAL.Models.Vaga
 
 @{
     ViewBag.Title = "Edit";
@@ -12,10 +12,10 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>Vagas</h4>
+        <h4>Vaga</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        @Html.HiddenFor(model => model.VagasID)
+        @Html.HiddenFor(model => model.VagaID)
 
         <div class="form-group">
             @Html.LabelFor(model => model.Ocupada, htmlAttributes: new { @class = "control-label col-md-2" })

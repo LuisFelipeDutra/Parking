@@ -21,7 +21,7 @@ namespace MVC.Models
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("ParkingContexto", throwIfV1Schema: false)
+            : base("Parking", throwIfV1Schema: false)
         {
         }
 

@@ -28,12 +28,12 @@ namespace MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaga vagas = db.Vagas.Find(id);
-            if (vagas == null)
+            Vaga vaga = db.Vagas.Find(id);
+            if (vaga == null)
             {
                 return HttpNotFound();
             }
-            return View(vagas);
+            return View(vaga);
         }
 
         // GET: Vagas/Create
@@ -47,16 +47,16 @@ namespace MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VagasID,Ocupada")] Vaga vagas)
+        public ActionResult Create([Bind(Include = "VagaID,Ocupada")] Vaga vaga)
         {
             if (ModelState.IsValid)
             {
-                db.Vagas.Add(vagas);
+                db.Vagas.Add(vaga);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
-            return View(vagas);
+            return View(vaga);
         }
 
         // GET: Vagas/Edit/5
@@ -66,12 +66,12 @@ namespace MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaga vagas = db.Vagas.Find(id);
-            if (vagas == null)
+            Vaga vaga = db.Vagas.Find(id);
+            if (vaga == null)
             {
                 return HttpNotFound();
             }
-            return View(vagas);
+            return View(vaga);
         }
 
         // POST: Vagas/Edit/5
@@ -79,15 +79,15 @@ namespace MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VagasID,Ocupada")] Vaga vagas)
+        public ActionResult Edit([Bind(Include = "VagaID,Ocupada")] Vaga vaga)
         {
             if (ModelState.IsValid)
             {
-                db.Entry(vagas).State = EntityState.Modified;
+                db.Entry(vaga).State = EntityState.Modified;
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            return View(vagas);
+            return View(vaga);
         }
 
         // GET: Vagas/Delete/5
@@ -97,12 +97,12 @@ namespace MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vaga vagas = db.Vagas.Find(id);
-            if (vagas == null)
+            Vaga vaga = db.Vagas.Find(id);
+            if (vaga == null)
             {
                 return HttpNotFound();
             }
-            return View(vagas);
+            return View(vaga);
         }
 
         // POST: Vagas/Delete/5
@@ -110,8 +110,8 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Vaga vagas = db.Vagas.Find(id);
-            db.Vagas.Remove(vagas);
+            Vaga vaga = db.Vagas.Find(id);
+            db.Vagas.Remove(vaga);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

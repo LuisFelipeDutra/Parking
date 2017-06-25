@@ -10,7 +10,7 @@ namespace DAL.Models
     public class Vaga
     {
         [Key]
-        public int VagasID { get; set; }
+        public int VagaID { get; set; }
         [Required]
         public bool Ocupada { get; set; } //True para sim e false para não
     }
