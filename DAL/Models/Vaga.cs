@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace DAL.Models
 {
-    public class Vagas
+    public class Vaga
     {
         [Key]
         public int VagasID { get; set; }

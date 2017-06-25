@@ -28,7 +28,7 @@ namespace MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vagas vagas = db.Vagas.Find(id);
+            Vaga vagas = db.Vagas.Find(id);
             if (vagas == null)
             {
                 return HttpNotFound();
@@ -47,7 +47,7 @@ namespace MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "VagasID,Ocupada")] Vagas vagas)
+        public ActionResult Create([Bind(Include = "VagasID,Ocupada")] Vaga vagas)
         {
             if (ModelState.IsValid)
             {
@@ -66,7 +66,7 @@ namespace MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vagas vagas = db.Vagas.Find(id);
+            Vaga vagas = db.Vagas.Find(id);
             if (vagas == null)
             {
                 return HttpNotFound();
@@ -79,7 +79,7 @@ namespace MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "VagasID,Ocupada")] Vagas vagas)
+        public ActionResult Edit([Bind(Include = "VagasID,Ocupada")] Vaga vagas)
         {
             if (ModelState.IsValid)
             {
@@ -97,7 +97,7 @@ namespace MVC.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            Vagas vagas = db.Vagas.Find(id);
+            Vaga vagas = db.Vagas.Find(id);
             if (vagas == null)
             {
                 return HttpNotFound();
@@ -110,7 +110,7 @@ namespace MVC.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            Vagas vagas = db.Vagas.Find(id);
+            Vaga vagas = db.Vagas.Find(id);
             db.Vagas.Remove(vagas);
             db.SaveChanges();
             return RedirectToAction("Index");
