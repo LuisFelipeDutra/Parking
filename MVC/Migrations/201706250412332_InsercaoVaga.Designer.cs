@@ -7,18 +7,18 @@ namespace MVC.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class Vaga : IMigrationMetadata
+    public sealed partial class InsercaoVaga : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Vaga));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(InsercaoVaga));
         
         string IMigrationMetadata.Id
         {
-            get { return "201706250156426_Vaga"; }
+            get { return "201706250412332_InsercaoVaga"; }
         }
         
         string IMigrationMetadata.Source
         {
-            get { return Resources.GetString("Source"); }
+            get { return null; }
         }
         
         string IMigrationMetadata.Target

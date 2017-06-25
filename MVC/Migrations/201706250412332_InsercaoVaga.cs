@@ -3,7 +3,7 @@ namespace MVC.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Vaga : DbMigration
+    public partial class InsercaoVaga : DbMigration
     {
         public override void Up()
         {
