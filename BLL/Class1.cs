@@ -8,5 +8,6 @@ namespace BLL
 {
     class Class1
     {
+        //Teste
     }
 }
