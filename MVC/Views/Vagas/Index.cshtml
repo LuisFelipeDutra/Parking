@@ -20,6 +20,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.VagaID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.Ocupada)
         </td>
         <td>
