@@ -12,7 +12,7 @@ namespace DAL.Models
         [Key]
         public int VagaID { get; set; }
         [Required]
-        public bool Ocupada { get; set; } //True para sim e false para não
+        public bool Ocupada { get; set; } 
 
         public virtual List<Ticket> Tickets { get; set; }
     }

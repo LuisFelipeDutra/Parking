@@ -49,10 +49,11 @@ namespace MVC.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "TicketID,Placa,DataEntrada,VagaID")] Ticket ticket)
+        public ActionResult Create([Bind(Include = "TicketID,Placa,VagaID")] Ticket ticket)
         {
             if (ModelState.IsValid)
             {
+                ticket.DataEntrada = DateTime.Now;
                 db.Tickets.Add(ticket);
                 db.SaveChanges();
                 return RedirectToAction("Index");

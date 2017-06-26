@@ -18,7 +18,7 @@ namespace DAL.Models
         public string Placa { get; set; }
 
         [Required]
-        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
+        //[DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [DisplayName("Data de Entrada")]
         public DateTime DataEntrada { get; set; }
 

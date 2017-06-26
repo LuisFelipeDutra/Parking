@@ -53,6 +53,7 @@ namespace MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                ticket.DataEntrada = DateTime.Now;
                 db.Tickets.Add(ticket);
                 db.SaveChanges();
                 return RedirectToAction("Index");
