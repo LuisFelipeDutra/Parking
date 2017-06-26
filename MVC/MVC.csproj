@@ -223,6 +223,10 @@
     <Compile Include="Migrations\201706260021110_DataCorreta.Designer.cs">
       <DependentUpon>201706260021110_DataCorreta.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201706260458173_Disponiveis.cs" />
+    <Compile Include="Migrations\201706260458173_Disponiveis.Designer.cs">
+      <DependentUpon>201706260458173_Disponiveis.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -380,6 +384,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201706260021110_DataCorreta.resx">
       <DependentUpon>201706260021110_DataCorreta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201706260458173_Disponiveis.resx">
+      <DependentUpon>201706260458173_Disponiveis.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

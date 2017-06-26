@@ -51,6 +51,9 @@ namespace MVC.Controllers
         {
             if (ModelState.IsValid)
             {
+                int Ocup = vaga.Ocupada.CompareTo(true);
+                int Total = vaga.Tickets.Count;
+                vaga.Disponiveis = Total - Ocup;
                 db.Vagas.Add(vaga);
                 db.SaveChanges();
                 return RedirectToAction("Index");
