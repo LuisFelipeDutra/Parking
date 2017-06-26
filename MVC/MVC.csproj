@@ -192,6 +192,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CreateTicketsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\TicketsController.cs" />
@@ -339,6 +340,11 @@
     <Content Include="Views\Tickets\Details.cshtml" />
     <Content Include="Views\Tickets\Edit.cshtml" />
     <Content Include="Views\Tickets\Index.cshtml" />
+    <Content Include="Views\CreateTickets\Create.cshtml" />
+    <Content Include="Views\CreateTickets\Delete.cshtml" />
+    <Content Include="Views\CreateTickets\Details.cshtml" />
+    <Content Include="Views\CreateTickets\Edit.cshtml" />
+    <Content Include="Views\CreateTickets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
