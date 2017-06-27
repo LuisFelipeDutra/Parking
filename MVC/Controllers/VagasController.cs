@@ -21,6 +21,16 @@ namespace MVC.Controllers
             return View(db.Vagas.ToList());
         }
 
+        public int VagasDisponiveis()
+        {
+            int data = (from vagas in db.Vagas
+                        where vagas.Ocupada == false
+                        select vagas).Count();
+            return 0;
+        }
+
+
+
         // GET: Vagas/Details/5
         public ActionResult Details(int? id)
         {
@@ -42,16 +52,6 @@ namespace MVC.Controllers
             return View();
         }
 
-        //GET:Vagas/Disponiveis
-        public int Disponiveis()
-        {
-            int data = (from vagas in db.Vagas
-                        where vagas.Ocupada == false
-                        select vagas).Count();
-
-            return data;
-        }
-
         // POST: Vagas/Create
         // Para se proteger de mais ataques, ative as propriedades específicas a que você quer se conectar. Para 
         // obter mais detalhes, consulte https://go.microsoft.com/fwlink/?LinkId=317598.
@@ -61,9 +61,6 @@ namespace MVC.Controllers
         {
             if (ModelState.IsValid)
             {
-                //int Ocup = vaga.Ocupada.CompareTo(true);
-                //int Total = vaga.Tickets.Count;
-                //vaga.Disponiveis = Total - Ocup;
                 db.Vagas.Add(vaga);
                 db.SaveChanges();
                 return RedirectToAction("Index");
