@@ -26,7 +26,7 @@ namespace MVC.Controllers
             int data = (from vagas in db.Vagas
                         where vagas.Ocupada == false
                         select vagas).Count();
-            return 0;
+            return data;
         }
 
 
