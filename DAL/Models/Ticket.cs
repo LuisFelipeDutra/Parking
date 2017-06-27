@@ -24,7 +24,7 @@ namespace DAL.Models
 
         [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:dd/MM/yyyy}")]
         [DisplayName("Data de Saída")]
-        public DateTime DataSaida { get; set; }
+        public DateTime? DataSaida { get; set; }
         public bool SegundaVia { get; set; }
 
         //Sem pagamento (Outros,Emergência,Evento Especial)

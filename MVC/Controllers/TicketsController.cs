@@ -54,7 +54,7 @@ namespace MVC.Controllers
             if (ModelState.IsValid)
             {
                 ticket.DataEntrada = DateTime.Now;
-                ticket.DataSaida = new DateTime(2017, 1, 1); ;
+                ticket.DataSaida = null;
                 db.Tickets.Add(ticket);
                 db.SaveChanges();
                 return RedirectToAction("Index");

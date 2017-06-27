@@ -18,11 +18,6 @@ namespace MVC.Controllers
         // GET: Vagas
         public ActionResult Index()
         {
-
-            var data = (from vagas in db.Vagas
-                       where vagas.Ocupada == false
-                       select vagas).Count();
-
             return View(db.Vagas.ToList());
         }
 
